@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'literals';
+
+  public constructor() {}
+
+  public get values(): any {
+    return ['ACC.ACCOUNTING', new Date(), 5000, 'fixed string'];
+  }
 }
