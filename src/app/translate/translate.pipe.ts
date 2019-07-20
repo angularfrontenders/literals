@@ -30,15 +30,8 @@ export class TranslatePipe implements PipeTransform {
   }
 
   public transform(value: string, ...args: any[]): string {
-    let returnedValue = this.getResource(value);
-    returnedValue = this.format(returnedValue, args[0]);
-
-    return returnedValue;
-  }
-
-  private getResource(value: string): string {
     const resource: ITextResource = this._resourcesService.get(value);
-    return resource.notFound ? value : resource.value;
+    return resource.notFound ? value : this.format(resource.value, args[0]);
   }
 
   private format(value: string, args: any[]) {
@@ -46,7 +39,7 @@ export class TranslatePipe implements PipeTransform {
       (args || []).forEach((arg: any, index: number) => {
         const strategyFound: strategies.ITranslateStrategy = this._strategies.find(
           (strategy: strategies.ITranslateStrategy) => {
-            return strategy.canApply(index, value);
+            return strategy.canApply(index, value, arg);
           }
         );
 

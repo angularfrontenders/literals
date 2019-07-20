@@ -26,9 +26,9 @@ export class ResourcesService {
           {
             key: 'EXAMPLE',
             value:
-              'this is a test for {0:k} for date {1:d} with {2:c} in a {3:s}'
+              'this is a test for {0:k} -> string: {1}; date: {2:d}; currency: {3:c}; number: {4:n}'
           },
-          { key: 'ACCOUNTING', value: 'Accounting' }
+          { key: 'ANGULARFRONTENDERS', value: 'Angular Frontenders' }
         ];
       }
     );

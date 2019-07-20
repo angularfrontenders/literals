@@ -8,13 +8,21 @@ export class DateStrategy implements ITranslateStrategy {
   public constructor(private _datePipe: DatePipe) {}
 
   private getRegExp = (index: number) => new RegExp(`{${index}:d}`, 'gm');
+  private isDate = (value: any) =>
+    Object.prototype.toString.call(value) === '[object Date]';
 
-  public canApply(index: number, text: string): boolean {
+  public canApply(index: number, text: string, value: any): boolean {
     const regDate = this.getRegExp(index);
     return regDate.test(text);
   }
 
   public apply(index: number, text: string, value: any): string {
+    if (!this.isDate(value)) {
+      console.log(
+        `TranslatePipe: value at position ${index} is not a date object`
+      );
+      return text;
+    }
     const regDate = this.getRegExp(index);
     return text.replace(regDate, this._datePipe.transform(value, this._format));
   }

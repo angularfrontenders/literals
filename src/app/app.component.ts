@@ -17,6 +17,6 @@ export class AppComponent implements OnInit {
   }
 
   public get values(): Array<any> {
-    return ['ACCOUNTING', new Date(), 5000, 'fixed string'];
+    return ['ANGULARFRONTENDERS', 'fixed string', 5, new Date(), 5000.5, 45.2];
   }
 }
