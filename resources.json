@@ -1,0 +1,9 @@
+{
+  "resources": [
+    { "key": "ACCOUNTING", "value": "Accounting" },
+    {
+      "key": "EXAMPLE",
+      "value": "this is a test for {0:k} for date {1:d} with {2:c} in a {3:s}"
+    }
+  ]
+}
