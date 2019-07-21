@@ -1,9 +1,20 @@
 {
-  "resources": [
+  "es-ES": [
+    { "key": "TITLE", "value": "¡Bienvenido a Literales!" },
     { "key": "ANGULARFRONTENDERS", "value": "Angular Frontenders" },
+    { "key": "HELLO.WORLD", "value": "¡Hola mundo!" },
     {
-      "key": "EXAMPLE",
-      "value": "this is a test for {0:k} -> string: {1}; date: {2:d}; currency: {3:c}; number: {4:n}"
+      "key": "FORMATS",
+      "value": "este es un test de formatos {0:k} -> cadena: {1}; fecha: {2:d}; moneda: {3:c}; número: {4:n}"
+    }
+  ],
+  "en-US": [
+    { "key": "TITLE", "value": "Welcome to Literals!" },
+    { "key": "ANGULARFRONTENDERS", "value": "Angular Frontenders" },
+    { "key": "HELLO.WORLD", "value": "Hello world!" },
+    {
+      "key": "FORMATS",
+      "value": "this is a formats test {0:k} -> string: {1}; date: {2:d}; currency: {3:c}; number: {4:n}"
     }
   ]
 }

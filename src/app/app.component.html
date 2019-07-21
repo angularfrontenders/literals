@@ -1,12 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
-  <img alt="Angular Frontenders" src="../assets/angular-frontenders.png" />
+  <h1>{{ 'TITLE' | translate }}</h1>
+  <img
+    alt="{{ 'ANGULARFRONTENDERS' | translate }}"
+    src="../assets/angular-frontenders.png"
+  />
 </div>
 <h2>
-  Literals test:
+  {{ 'HELLO.WORLD' | translate }}
   <br />
-  {{ 'EXAMPLE' | translate: values }}
+  <br />
+  {{ 'FORMATS' | translate: values }}
 </h2>
 
 <router-outlet></router-outlet>
