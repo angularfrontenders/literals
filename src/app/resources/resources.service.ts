@@ -26,9 +26,17 @@ export class ResourcesService {
           console.log('not server found. Get default resources...');
           this._dictionary = [
             {
-              key: 'EXAMPLE',
+              key: 'TITLE',
+              value: 'Welcome to Literals!'
+            },
+            {
+              key: 'HELLO.WORLD',
+              value: 'Hello world!'
+            },
+            {
+              key: 'FORMATS',
               value:
-                'this is a test for {0:k} -> string: {1}; date: {2:d}; currency: {3:c}; number: {4:n}'
+                'this is a formats test {0:k} -> string: {1}; date: {2:d}; currency: {3:c}; number: {4:n}'
             },
             { key: 'ANGULARFRONTENDERS', value: 'Angular Frontenders' }
           ];
