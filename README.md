@@ -1,3 +1,5 @@
+Important: This repository was moved to an Nx monorepo at https://github.com/angularfrontenders/monorepo
+
 # Literals
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
